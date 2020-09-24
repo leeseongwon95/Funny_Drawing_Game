@@ -1,4 +1,4 @@
-import { handleDisconnected, handleNewUser } from "./notifications";
+import { handleNewUser, handleDisconnected } from "./notifications";
 
 let socket = null;
 
