@@ -29,5 +29,5 @@ if (sendMsg) {
   sendMsg.addEventListener("submit", handleSendMsg);
 }
 
-export const disableCaht = () => (sendMsg.style.display = "none");
+export const disableChat = () => (sendMsg.style.display = "none");
 export const enableChat = () => (sendMsg.style.display = "flex");
