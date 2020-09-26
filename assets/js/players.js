@@ -1,9 +1,10 @@
+import { disableCaht } from "./chat";
 import {
   disableCanvas,
-  enableCanvas,
   hideControls,
-  resetCanvas,
+  enableCanvas,
   showControls,
+  resetCanvas,
 } from "./paint";
 
 const board = document.getElementById("jsPBoard");
@@ -25,18 +26,20 @@ const setNotifs = (text) => {
 
 export const handlePlayerUpdate = ({ sockets }) => addPlayers(sockets);
 export const handleGameStarted = () => {
-  setNotifs();
+  setNotifs("");
   disableCanvas();
   hideControls();
 };
 export const handleLeaderNotif = ({ word }) => {
   enableCanvas();
   showControls();
+  disableCaht();
   notifs.innerText = `You are the leader, paint: ${word}`;
 };
 export const handleGameEnded = () => {
-  setNotifs("Game Ended.");
+  setNotifs("Game ended.");
   disableCanvas();
   hideControls();
   resetCanvas();
 };
+export const handleGameStarting = () => setNotifs("Game will start soon");
