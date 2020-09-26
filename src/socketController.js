@@ -72,8 +72,8 @@ const socketController = (socket, io) => {
   socket.on(events.sendMsg, ({ message }) => {
     if (message === word) {
       superBroadcast(events.newMsg, {
-        message: `Winner is ${socket.nickname}, word was: ${word}`,
-        nickname: "Bot",
+        message: `${socket.nickname} 님이 이겼습니다! , 정답은 ${word} 입니다.`,
+        nickname: "알림",
       });
       addPoint(socket.id);
     } else {

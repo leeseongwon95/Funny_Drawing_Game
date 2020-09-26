@@ -36,12 +36,13 @@ export const handleLeaderNotif = ({ word }) => {
   enableCanvas();
   showControls();
   disableChat();
-  notifs.innerText = `You are the leader, paint: ${word}`;
+  notifs.innerText = `${word} 을(를) 그려주세요!`;
 };
 export const handleGameEnded = () => {
-  setNotifs("Game ended.");
+  setNotifs("게임이 종료되었습니다.");
   disableCanvas();
   hideControls();
   resetCanvas();
 };
-export const handleGameStarting = () => setNotifs("Game will start soon");
+export const handleGameStarting = () =>
+  setNotifs("게임이 곧 시작됩니다! 잠시만 기다려주세요.");

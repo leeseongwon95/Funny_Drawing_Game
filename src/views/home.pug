@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ko")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -8,7 +8,7 @@ html(lang="en")
     body
         .loginBox
             form#jsLogin
-                input(placeholder="what's your nickname", type="text")
+                input(placeholder="당신의 닉네임을 입력해주세요.", type="text")
         .gameContainer#jsGame
             .main
                 #jsNotifs
@@ -29,7 +29,7 @@ html(lang="en")
                 .player__board#jsPBoard
                 ul.chat__messages#jsMessages
                 form.chat__form#jsSendMsg
-                    input(placeholder="Write a message", type="text")
+                    input(placeholder="채팅을 입력해주세요.", type="text")
         script.
             window.events = !{events}
         script(src="/socket.io/socket.io.js")
